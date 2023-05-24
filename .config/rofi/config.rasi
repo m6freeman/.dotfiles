@@ -1,0 +1,8 @@
+configuration {
+    modi: "run";
+    lines: 10;
+    show-icons: false;
+    combi-mode: "drun, run";
+}
+
+@theme "~/.config/rofi/gruvbox.rasi"
