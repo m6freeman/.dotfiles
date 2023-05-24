@@ -1,3 +1,3 @@
 # .dotfiles
 
-![Screenshot](.images/screenshots/home.png)
+![Screenshot](./images/screenshots/home.png)
