@@ -1,6 +1,6 @@
 #!/bin/sh
 alias ..='cd ..'
-alias btm='btm -flgnTa --process_command --default_widget_type=Temp --hide_time --hide_table_gap --network_use_byte'
+alias btm='btm -flgnTa --process_command --default_widget_type=Temp --hide_time --hide_table_gap'
 alias cat='bat'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias cp='cp -iv'
