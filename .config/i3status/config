@@ -28,10 +28,10 @@ general {
 #order += "tztime variant"
 #order += "volume master"
 #order += "wireless _first_"
-order += "tztime time"
-order += "tztime date"
-order += "volume master"
 order += "path_exists VPN"
+order += "volume master"
+order += "tztime date"
+order += "tztime time"
 
 tztime date {
         format = "%a. %d %b %Y"

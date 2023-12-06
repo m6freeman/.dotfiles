@@ -37,5 +37,7 @@ zstyle ':completion:*' use-cache on
 
 
 # Print a greeting message when shell is started
-wttr knoxville | head -n 7 | tail -n 5 ;
+timeout 2 wttr knoxville | head -n 7 | tail -n 5 ;
 echo 'BTC:' $(curl -s http://api.coindesk.com/v1/bpi/currentprice.json | python -c "import json, sys; print('$' + json.load(sys.stdin)['bpi']['USD']['rate'].rsplit('.')[0])")
+
+#$PATH=''
