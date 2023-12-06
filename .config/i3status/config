@@ -28,8 +28,8 @@ general {
 #order += "tztime variant"
 #order += "volume master"
 #order += "wireless _first_"
-order += "volume master"
 order += "path_exists VPN"
+order += "volume master"
 order += "tztime date"
 order += "tztime time"
 
