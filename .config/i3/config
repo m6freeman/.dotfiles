@@ -351,14 +351,14 @@ set_from_resource $term_color15    color15
 
 # gruvbox
 set $bg #282828
-set $red #cc241d
-set $green #98971a
-set $yellow #d79921
-set $blue #458588
-set $purple #b16286
-set $aqua #689d68
-set $gray #a89984
-set $darkgray #1d2021
+set $red #ea6962
+set $green #a9a665
+set $yellow #e78a4e
+set $blue #7daea3
+set $purple #d3869b
+set $aqua #89b482
+set $gray #dfbf8e
+set $darkgray #665c54
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
@@ -366,9 +366,10 @@ bar {
         i3bar_command i3bar #--transparency
         status_command i3status ~/.config/i3status/config
         position bottom
-        font pango: Binchotan_Sharp 14
+        font pango: Victor Mono SemiBold 14
+        #font pango: Binchotan_Sharp 14
         separator_symbol " | "
-        tray_padding 3
+        tray_padding 1
 
         ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
         # tray_output primary
@@ -381,12 +382,12 @@ bar {
 
         colors {
                 background $bg
-                statusline $fg
+                statusline $gray
                 # workspaces section
                 #                    border  backgr. text
-                focused_workspace    $fg $fg $bg
-                inactive_workspace   $bg $bg $fg
-                active_workspace     $bg $bg $fg
+                focused_workspace    $gray $gray $bg
+                inactive_workspace   $bg $bg $gray
+                active_workspace     $bg $bg $gray
                 urgent_workspace     $red $red $bg
         }
 }

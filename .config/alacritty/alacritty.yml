@@ -11,21 +11,22 @@ scrolling:
 
 font:
   normal:
-    family: 'Binchotan_Sharp'
-    style: Regular
+    family: 'Victor Mono'
+    style: SemiBold
   bold:
-    family: 'Binchotan_Sharp'
+    family: 'Victor Mono'
     style: Bold
   italic:
-    family: 'Binchotan_Sharp'
+    family: 'Victor Mono'
     style: Italic
   bold_italic:
-    family: 'Binchotan_Sharp'
+    family: 'Victor Mono'
     style: Bold Italic
   size: 14
   offset:
     x: 1
     y: 1
+      # O 0 1 l I
 
 draw_bold_text_with_bright_colors: true
 
