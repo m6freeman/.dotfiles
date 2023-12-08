@@ -26,7 +26,15 @@ font:
   offset:
     x: 1
     y: 1
-      # O 0 1 l I
+
+# ABCDEFGHIJKLMNOPQRSTUVWXYZ
+# abcdefghijklmnopqrstuvwxyz
+# 1234567890-=
+# !@#$%^&*()_+
+# The quick brown fox jumped over the lazy dog.
+# 0 != O
+# 1 != l
+# q != g
 
 draw_bold_text_with_bright_colors: true
 
