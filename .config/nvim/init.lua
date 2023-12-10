@@ -143,6 +143,15 @@ require('lazy').setup({
   },
 
   {
+    -- Everforest Theme
+    "neanias/everforest-nvim",
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme 'everforest'
+    end,
+  },
+
+  {
     -- Gruvbox Theme
     "ellisonleao/gruvbox.nvim",
     priority = 1000,
@@ -167,7 +176,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = true,
-        theme = 'gruvbox-material',
+        theme = 'everforest',
         component_separators = '|',
         section_separators = '',
       },
@@ -228,7 +237,7 @@ require('lazy').setup({
 
 -- Set colorscheme
 vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme everforest]])
 
 -- Set highlight on search
 vim.o.hlsearch = false

@@ -14,26 +14,26 @@ general {
         color_bad = "#ea6962"
 }
 
+order += "path_exists VPN"
 #order += "battery all"
-#order += "cpu_usage"
-#order += "disk /"
+order += "cpu_usage"
+order += "disk /"
 #order += "disk /home"
 #order += "ethernet _first_"
 #order += "ipv6"
 #order += "load"
-#order += "memory"
-#order += "path_exists VPN"
+order += "memory"
 #order += "spacer"
 #order += "tztime variant"
-#order += "volume master"
 #order += "wireless _first_"
-order += "path_exists VPN"
 order += "volume master"
 order += "tztime date"
 order += "tztime time"
 
+# man strftime
 tztime date {
-        format = "%a. %d %b %Y"
+        #format = "%a. %d %b %Y"
+        format = "%Y-%m-%d"
         align = "left"
         #min_width = 994
 }

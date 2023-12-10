@@ -67,7 +67,7 @@ set norunexec
 " The following line will cause issues if using vifm.vim with regular vim.
 " Either use neovim or comment out the following line.
 "colorscheme distrotube
-colorscheme gruvbox Default-256 Default
+colorscheme palenight Default-256 Default
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M

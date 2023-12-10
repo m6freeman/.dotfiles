@@ -336,36 +336,56 @@ set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
 
+# Everforest
+set $aqua #83c092
+set $bg #2d353b
+set $bgg #181825
+set $blue #7fbbb3
+set $darkgray #859289
+set $fg #d3c6aa
+set $gray #7a8478
+set $gray2 #9da9a0
+set $green #a7c080
+set $orange #e69875
+set $purple #d699b6
+set $red #e67e80
+set $statusline1 #a7c080
+set $statusline2 #d3c6aa
+set $statusline3 #e67e80
+set $yellow #dbbc7f
+
+
 # Catppuccin
-#set $fg         #C6D0F5
+#set $aqua       #94E2D5
 #set $bg         #1E1E2E
 #set $bgg        #181825
-#set $red        #F38BA8
-#set $green      #A6E3A1
-#set $yellow     #F9E2AF
 #set $blue       #87B0F9
-#set $purple     #CBA6F7
-#set $aqua       #94E2D5
-#set $gray       #565970
 #set $darkgray   #1E1E2E
+#set $fg         #C6D0F5
+#set $gray       #565970
+#set $green      #A6E3A1
+#set $purple     #CBA6F7
+#set $red        #F38BA8
+#set $yellow     #F9E2AF
+
 
 # gruvbox
-set $bg #282828
-set $red #ea6962
-set $green #a9a665
-set $yellow #e78a4e
-set $blue #7daea3
-set $purple #d3869b
-set $aqua #89b482
-set $gray #dfbf8e
-set $darkgray #665c54
+#set $aqua #89b482
+#set $bg #282828
+#set $blue #7daea3
+#set $darkgray #665c54
+#set $gray #dfbf8e
+#set $green #a9a665
+#set $purple #d3869b
+#set $red #ea6962
+#set $yellow #e78a4e
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
         i3bar_command i3bar #--transparency
         status_command i3status ~/.config/i3status/config
-        position bottom
+        position top
         font pango: Victor Mono SemiBold 14
         #font pango: Binchotan_Sharp 14
         separator_symbol " | "
@@ -382,12 +402,12 @@ bar {
 
         colors {
                 background $bg
-                statusline $gray
+                statusline $statusline
                 # workspaces section
                 #                    border  backgr. text
-                focused_workspace    $gray $gray $bg
-                inactive_workspace   $bg $bg $gray
-                active_workspace     $bg $bg $gray
+                focused_workspace    $statusline $statusline $bg
+                inactive_workspace   $bg $bg $statusline
+                active_workspace     $bg $bg $statusline
                 urgent_workspace     $red $red $bg
         }
 }
@@ -398,24 +418,11 @@ bar {
 bindsym $mod+m bar mode toggle
 
 
-# green gruvbox
 # class                 border|backgr|text|indicator|child_border
-client.focused          $green $green $darkgray $purple $darkgray
+client.focused          $gray $gray $darkgray $purple $darkgray
 client.focused_inactive $bg $bg $yellow $purple $bg
 client.unfocused        $bgg $bgg $yellow $purple $bg
 client.urgent           $red $red $white $red $red
-
-# blue gruvbox
-# class                 border|backgr|text|indicator|child_border
-#client.focused          $blue $blue $darkgray $purple $darkgray
-#client.focused_inactive $darkgray $darkgray $yellow $purple $darkgray
-#client.unfocused        $darkgray $darkgray $yellow $purple $darkgray
-#client.urgent           $red $red $white $red $red
-
-
-
-
-
 
 
 
