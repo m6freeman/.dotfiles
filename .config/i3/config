@@ -7,7 +7,6 @@ set $alt Mod1
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <default|stacking|tabbed>
-workspace_layout tabbed
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
 default_border none
