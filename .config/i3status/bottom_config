@@ -1,0 +1,38 @@
+
+# i3status configuration file. see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        output_format = "i3bar"
+        colors = true
+        interval = 5
+        color_good = "#a9a665"
+        color_degraded = "#dfbf8e"
+        color_bad = "#ea6962"
+}
+
+order += "netdata"
+order += "i3block weather"
+order += "vpn_status"
+order += "wifi"
+
+# py3status
+lm_sensors {}
+
+wifi {
+        format = '{bitrate}{bitrate_unit} |W: down'
+}
+
+vpn_status {
+        format_vpn = '󰖂 {name}'
+}
+
+i3block weather {
+        command = "curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo"
+        interval = 3600
+}
+

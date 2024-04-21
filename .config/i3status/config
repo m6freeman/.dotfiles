@@ -14,21 +14,71 @@ general {
         color_bad = "#ea6962"
 }
 
-order += "path_exists VPN"
-#order += "battery all"
-order += "cpu_usage"
-order += "disk /"
-#order += "disk /home"
-#order += "ethernet _first_"
-#order += "ipv6"
-#order += "load"
-order += "memory"
-#order += "spacer"
-#order += "tztime variant"
-#order += "wireless _first_"
+order += "cmus"
 order += "volume master"
-order += "tztime date"
-order += "tztime time"
+order += "i3block xmr_feed"
+order += "cpu_usage"
+order += "lm_sensors"
+order += "clock"
+order += "arch_updates"
+
+# py3status
+lm_sensors {
+        format_chip = ' {format_sensor}'
+        format_sensor = '[\?color=auto.input {input} 󰔄]'
+        chips = ['k10temp-pci-00c3']
+        sensors = ['tccd1']
+}
+
+cmus {
+        format = "[\?if=is_started [\?if=is_playing  ][\?if=is_paused  ][\?if=is_stopped  ][[{artist}][\?soft  - ][{title}]]]"
+        button_previous = 4
+        button_next = 5
+}
+
+vpn_status {
+        format_vpn = '󰖂 {name}'
+}
+
+clock {
+        format = "{America/New_York}"
+        format_time = "%Y-%m-%d %H:%M:%S"
+}
+
+cpu_usage {
+        format = " %usage"
+
+}
+
+volume master {
+        format = "󰕾 %volume"
+        format_muted = "󰕿 %volume"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+        on_click 1 = "exec pamixer --toggle-mute"
+        on_click 4 = "exec pamixer --increase 5"
+        on_click 5 = "exec pamixer --decrease 5"
+}
+
+arch_updates {
+        format = '󰣇 {total} '
+}
+
+i3block xmr_feed {
+        command = "~/dev/apps/rust/xmr_feed/target/debug/xmr_feed"
+        interval = 60
+}
+
+
+
+
+
+
+cpu_temperature 0 {
+      format = "T: %degrees °C"
+      path = "/sys/class/thermal/thermal_zone0/temp"
+}
 
 # man strftime
 tztime date {
@@ -47,19 +97,6 @@ tztime time {
 path_exists VPN {
         # path exists when a VPN tunnel launched by nmcli/nm-applet is active
         path = "/proc/sys/net/ipv4/conf/wg-mullvad"
-}
-
-volume master {
-        format = "♪: %volume"
-        format_muted = "♪: muted (%volume)"
-        device = "default"
-        mixer = "Master"
-        mixer_idx = 0
-}
-
-cpu_usage {
-        format = " cpu  %usage "
-
 }
 
 load {
@@ -99,8 +136,7 @@ battery all {
 }
 
 memory {
-        # format = "%used | %available"
-        format = %used/%available
+        format = " %used / %total "
         threshold_degraded = "1G"
         format_degraded = "MEMORY < %available"
 }

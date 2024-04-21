@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export PATH=$PATH:$(ruby -e 'print Gem.user_dir')/bin
+export PATH=/home/matt/.nimble/bin:$PATH
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
@@ -37,7 +39,17 @@ zstyle ':completion:*' use-cache on
 
 
 # Print a greeting message when shell is started
-timeout 2 wttr knoxville | head -n 7 | tail -n 5 ;
-echo 'BTC:' $(curl -s http://api.coindesk.com/v1/bpi/currentprice.json | python -c "import json, sys; print('$' + json.load(sys.stdin)['bpi']['USD']['rate'].rsplit('.')[0])")
-
-#$PATH=''
+echo $(curl -s 'https://min-api.cryptocompare.com/data/price?fsym=XMR&tsyms=BTC,USD' | python -c "
+import json
+import sys
+rates = json.load(sys.stdin)
+print(f\"XMR1:BTC{rates['BTC']}:USD{rates['USD']}\")
+") '|' $(curl -s 'https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=XMR,USD' | python -c "
+import json
+import sys
+rates = json.load(sys.stdin)
+print(f\"BTC1:XMR{rates['XMR']}:USD{rates['USD']}\")
+")
+echo
+echo "Are you sure you wish to quit?"
+echo "All unsaved progress will be lost."
