@@ -22,7 +22,8 @@ bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:'Binchotan_Sharp' 0
+#font pango:'Binchotan_Sharp' 0
+font pango: Victor Mono SemiBold 0
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -44,10 +45,8 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-#exec --no-startup-id volumeicon
-#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 exec --no-startup-id start-pulseaudio-x11
-exec --no-startup-id pa-applet --disable-notifications
+#exec --no-startup-id pa-applet --disable-notifications
 bindsym $mod+Ctrl+m exec pavucontrol
 
 ################################################################################################
@@ -64,6 +63,7 @@ bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+#bindcode 25 exec pamixer -i 5
 
 # focus_follows_mouse no
 
@@ -184,8 +184,6 @@ bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10; workspace $ws10
 
 # Open applications on specific workspaces
-assign [class="eddie*"] $ws2
-assign [title="eddie*"] $ws2
 # assign [class="Pale moon"] $ws2
 # assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
@@ -382,23 +380,20 @@ set $yellow #dbbc7f
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-        i3bar_command i3bar #--transparency
-        status_command i3status ~/.config/i3status/config
+        #i3bar_command i3bar #--transparency
+        status_command py3status -c ~/.config/i3status/config
+        #status_command i3blocks
         position top
         font pango: Victor Mono SemiBold 14
         #font pango: Binchotan_Sharp 14
-        separator_symbol " | "
-        tray_padding 1
-
+        separator_symbol "  "
         ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-        # tray_output primary
+        tray_output none
         # tray_output eDP1
-
+        tray_padding 1
         bindsym button4 nop
         bindsym button5 nop
         strip_workspace_numbers yes
-
-
         colors {
                 background $bg
                 statusline $statusline
@@ -411,7 +406,25 @@ bar {
         }
 }
 
-
+bar {
+        #tray_output none
+        status_command py3status -c ~/.config/i3status/bottom_config
+        position bottom
+        font pango: Victor Mono SemiBold 14
+        separator_symbol "  "
+        workspace_buttons no
+        colors {
+                background $bg
+                statusline $statusline
+                # workspaces section
+                #                    border  backgr. text
+                focused_workspace    $statusline $statusline $bg
+                inactive_workspace   $bg $bg $statusline
+                active_workspace     $bg $bg $statusline
+                urgent_workspace     $red $red $bg
+        }
+        
+}
 
 # hide/unhide i3status bar
 bindsym $mod+m bar mode toggle
