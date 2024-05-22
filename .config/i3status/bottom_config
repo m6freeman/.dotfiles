@@ -32,7 +32,7 @@ vpn_status {
 }
 
 i3block weather {
-        command = "curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo"
+        command = "~/dev/apps/rust/wttr_feed/target/debug/wttr_feed"
         interval = 3600
 }
 
