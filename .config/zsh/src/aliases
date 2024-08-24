@@ -1,14 +1,14 @@
 #!/bin/sh
 alias ..='cd ..'
 #alias btm='btm -flgnTa --process_command --default_widget_type=Temp --hide_time --hide_table_gap'
-alias btm='btm -lgnTa --default_widget_type=Temp --hide_time --hide_table_gap'
+alias btm='btm -lgnTa --default_widget_type=temp --hide_time --hide_table_gap'
 alias cat='bat'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias cp='cp -iv'
-alias df='df -H'                                                # Human-readable sizes
+alias df='df -H' # Human-readable sizes
 alias dn='dotnet'
 alias find='fd'
-alias free='free -m'                                            # Show sizes in MB
+alias free='free -m' # Show sizes in MB
 alias get-clipboard='xclip -selection c -o'
 alias gitl='git log --all --graph --oneline --decorate'
 alias i3restart='i3-msg restart'
@@ -18,11 +18,13 @@ alias ls2='eza --long --group-directories-first --header --git --tree --level 2'
 alias ls3='eza --long --group-directories-first --header --git --tree --level 3'
 alias mkdir='mkdir -pv'
 alias mv='mv -iv'
+alias rename='perl-rename'
 alias rg='rg -.'
 alias rm='rm -Iv --preserve-root'
 alias set-clipboard='xclip -selection c'
 alias tutanota='/opt/tutanota/tutanota-desktop-linux.AppImage'
 alias update='sudo pacman -Syyu'
+alias yt='cd ~/dev/apps/python/yewtube/; yt && cd -'
 alias ytdl='yt-dlp --extract-audio --audio-format mp3'
 alias zource='clear && source ~/.config/zsh/.zshrc'
 alias mon='mullvad connect && mullvad reconnect && mullvad lockdown-mode set on'
