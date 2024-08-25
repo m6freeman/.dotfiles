@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# When changing into or out of a directory, activate or deactivate a Python 
+# Virtual Environment if one is present.
 function cd() {
   builtin cd "$@"
 
