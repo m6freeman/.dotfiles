@@ -4,6 +4,7 @@ export ZDOTDIR=$HOME/.config/zsh
 export EDITOR=/usr/bin/nvim
 export SUDO_EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/code
+export PATH="$PATH:$HOME/.dotnet/tools"
 #export PATH=/home/$USER/.local/share/gem/ruby/$(gem -v)/bin:$PATH
 HISTFILE=$HOME/.zhistory
 HISTSIZE=1000
