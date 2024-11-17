@@ -495,3 +495,15 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
+# cmus controls
+bindsym Shift+F7 exec --no-startup-id cmus-remote --prev
+bindsym F7 exec --no-startup-id cmus-remote --seek -5
+bindsym F8 exec --no-startup-id cmus-remote --pause
+bindsym Shift+F9 exec --no-startup-id cmus-remote --next
+bindsym F9 exec --no-startup-id cmus-remote --seek +5
+
+# volume controls
+bindsym F10 exec pamixer --toggle-mute
+bindsym F11 exec pamixer --decrease 5
+bindsym F12 exec pamixer --increase 5
