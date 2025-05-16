@@ -32,7 +32,7 @@ vpn_status {
 }
 
 i3block weather {
-        command = "~/dev/apps/rust/wttr_feed/target/debug/wttr_feed"
+        command = "curl -s 'https://wttr.in/knoxville?format=%C+%t+%w+%p'"
         interval = 3600
 }
 
