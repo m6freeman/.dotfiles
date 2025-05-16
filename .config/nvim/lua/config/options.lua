@@ -1,3 +1,12 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+vim.g.have_nerd_font = false
+vim.g.undotree_WindowLayout = 4
+vim.g.undotree_DiffpanelHeight = 5
+vim.g.undotree_HighlightChangedText = 1
+vim.g.undotree_HighlightChangedWithSign = 1
+vim.g.undotree_ShortIndicators = 1
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.mouse = "a"
