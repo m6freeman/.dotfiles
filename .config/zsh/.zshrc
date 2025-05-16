@@ -53,3 +53,12 @@ print(f\"BTC1:XMR{rates['XMR']}:USD{rates['USD']}\")
 echo
 echo "Are you sure you wish to quit?"
 echo "All unsaved progress will be lost."
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/home/matt/.opam/opam-init/init.zsh' ]] || source '/home/matt/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration
