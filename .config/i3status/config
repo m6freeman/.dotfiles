@@ -11,7 +11,7 @@ general {
         interval = 5
         color_good = "#a9a665"
         color_degraded = "#dfbf8e"
-        color_bad = "#ea6962"
+        color_bad = "#d3869b"
 }
 
 order += "cmus"

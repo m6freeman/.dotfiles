@@ -23,7 +23,7 @@ bindsym $mod+n border normal
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:'Binchotan_Sharp' 0
-font pango: Victor Mono SemiBold 0
+font pango: Consolas SemiBold 0
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -334,22 +334,22 @@ set_from_resource $term_color15    color15
 
 
 # Everforest
-set $aqua #83c092
-set $bg #2d353b
-set $bgg #181825
-set $blue #7fbbb3
-set $darkgray #859289
-set $fg #d3c6aa
-set $gray #7a8478
-set $gray2 #9da9a0
-set $green #a7c080
-set $orange #e69875
-set $purple #d699b6
-set $red #e67e80
-set $statusline1 #a7c080
-set $statusline2 #d3c6aa
-set $statusline3 #e67e80
-set $yellow #dbbc7f
+#set $aqua #83c092
+#set $bg #2d353b
+#set $bgg #181825
+#set $blue #7fbbb3
+#set $darkgray #859289
+#set $fg #d3c6aa
+#set $gray #7a8478
+#set $gray2 #9da9a0
+#set $green #a7c080
+#set $orange #e69875
+#set $purple #d699b6
+#set $red #e67e80
+#set $statusline1 #a7c080
+#set $statusline2 #d3c6aa
+#set $statusline3 #e67e80
+#set $yellow #dbbc7f
 
 
 # Catppuccin
@@ -367,15 +367,15 @@ set $yellow #dbbc7f
 
 
 # gruvbox
-#set $aqua #89b482
-#set $bg #282828
-#set $blue #7daea3
-#set $darkgray #665c54
-#set $gray #dfbf8e
-#set $green #a9a665
-#set $purple #d3869b
-#set $red #ea6962
-#set $yellow #e78a4e
+set $aqua #89b482
+set $bg #282828
+set $blue #7daea3
+set $darkgray #665c54
+set $gray #dfbf8e
+set $green #a9a665
+set $purple #d3869b
+set $red #ea6962
+set $yellow #e78a4e
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
@@ -384,7 +384,7 @@ bar {
         status_command py3status -c ~/.config/i3status/config
         #status_command i3blocks
         position top
-        font pango: Victor Mono SemiBold 14
+        font pango: Consolas SemiBold 14
         #font pango: Binchotan_Sharp 14
         separator_symbol "  "
         ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
@@ -410,7 +410,7 @@ bar {
         #tray_output none
         status_command py3status -c ~/.config/i3status/bottom_config
         position bottom
-        font pango: Victor Mono SemiBold 14
+        font pango: Consolas SemiBold 14
         separator_symbol "  "
         workspace_buttons no
         colors {

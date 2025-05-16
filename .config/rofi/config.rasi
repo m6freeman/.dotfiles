@@ -5,4 +5,4 @@ configuration {
     combi-mode: "drun, run";
 }
 
-@theme "~/.config/rofi/squared-everforest.rasi"
+@theme "~/.config/rofi/themes/gruvbox.rasi"
