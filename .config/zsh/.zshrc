@@ -51,7 +51,7 @@ rates = json.load(sys.stdin)
 print(f\"BTC1:XMR{rates['XMR']}:USD{rates['USD']}\")
 ")
 echo
-echo "Are you sure you wish to quit?"
+echo "Are you sure you want to quit?"
 echo "All unsaved progress will be lost."
 
 
