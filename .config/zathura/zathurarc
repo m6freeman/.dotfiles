@@ -1,5 +1,6 @@
 # Zathura configuration file
 # See man `man zathurarc'
+
 map r reload
 map p print
 map i recolor
@@ -26,98 +27,7 @@ set zoom-min 10
 set guioptions ""
 
 set font "Binchotan_Sharp 15"
-set render-loading              true
+set render-loading true
 
-#Catppuccin
-#set completion-bg		      "#363A4F"
-#set completion-fg		      "#CAD3F5"
-#set completion-group-bg		  "#363A4F"
-#set completion-group-fg		  "#8AADF4"
-#set completion-highlight-bg	  "#575268"
-#set completion-highlight-fg	  "#CAD3F5"
-#set default-bg 			      "#24273A"
-#set default-fg                "#CAD3F5"
-#set highlight-active-color	  "#F5BDE6"
-#set highlight-color		      "#575268"
-#set highlight-fg              "#F5BDE6"
-#set index-active-bg		      "#363A4F"
-#set index-active-fg		      "#CAD3F5"
-#set index-bg			      "#24273A"
-#set index-fg			      "#CAD3F5"
-#set inputbar-bg 		      "#363A4F"
-#set inputbar-fg			      "#CAD3F5"
-#set notification-bg		      "#363A4F"
-#set notification-error-bg	  "#363A4F"
-#set notification-error-fg	  "#ED8796"
-#set notification-fg		      "#CAD3F5"
-#set notification-warning-bg	  "#363A4F"
-#set notification-warning-fg	  "#FAE3B0"
-#set recolor-darkcolor		  "#CAD3F5"
-#set recolor-lightcolor		  "#24273A"
-#set render-loading-bg		  "#24273A"
-#set render-loading-fg		  "#CAD3F5"
-#set statusbar-bg		      "#363A4F"
-#set statusbar-fg		      "#CAD3F5"
-
-
-#Gruvbox
-#set completion-bg               "#504945" # bg2
-#set completion-fg               "#ebdbb2" # fg
-#set completion-group-bg         "#3c3836" # bg1
-#set completion-group-fg         "#928374" # gray
-#set completion-highlight-bg     "#83a598" # bright:blue
-#set completion-highlight-fg     "#504945" # bg2
-#set default-bg                  "#32302f" # bg
-#set default-fg                  "#ebdbb2" # fg
-#set highlight-active-color      "#fe8019" # bright:orange
-#set highlight-color             "#fabd2f" # bright:yellow
-#set index-active-bg             "#83a598" # bright:blue
-#set index-active-fg             "#504945" # bg2
-#set index-bg                    "#504945" # bg2
-#set index-fg                    "#ebdbb2" # fg
-#set inputbar-bg                 "#32302f" # bg
-#set inputbar-fg                 "#ebdbb2" # fg
-#set notification-bg             "#32302f" # bg
-#set notification-error-bg       "#32302f" # bg
-#set notification-error-fg       "#fb4934" # bright:red
-#set notification-fg             "#b8bb26" # bright:green
-#set notification-warning-bg     "#32302f" # bg
-#set notification-warning-fg     "#fabd2f" # bright:yellow
-#set render-loading-bg           "#32302f" # bg
-#set render-loading-fg           "#ebdbb2" # fg
-#set statusbar-bg                "#504945" # bg2
-#set statusbar-fg                "#ebdbb2" # fg
-
-#EVERFOREST
-set completion-bg "#2f383e"
-set completion-fg "#d3c6aa"
-set completion-group-bg "#2f383e"
-set completion-group-fg "#7fbbb3"
-set completion-highlight-bg "#a7c080"
-set completion-highlight-fg "#2b3339"
-set default-bg "#2f383e"
-set default-fg "#d3c6aa"
-set highlight-active-color "#7fbbb3"
-set highlight-color "#a7c080"
-set index-active-bg "#a7c080"
-set index-active-fg "#2b3339"
-set index-bg "#2f383e"
-set index-fg "#d3c6aa"
-set inputbar-bg "#2f383e"
-set inputbar-fg "#d3c6aa"
-set notification-bg "#2f383e"
-set notification-error-bg "#e68183"
-set notification-error-fg "#2b3339"
-set notification-fg "#d3c6aa"
-set notification-warning-bg "#e68183"
-set notification-warning-fg "#2b3339"
-set recolor "true"
-set recolor-darkcolor "#d3c6aa"
-set recolor-keephue "true"
-set recolor-lightcolor "#2f383e"
-set render-loading-bg "#2f383e"
-set render-loading-fg "#d3c6aa"
-set statusbar-basename true
-set statusbar-bg "#404c51"
-set statusbar-fg "#d3c6aa"
+include ./themes/gruvboxrc
 
