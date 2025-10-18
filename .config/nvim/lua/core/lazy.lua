@@ -1,4 +1,3 @@
-local vim = vim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -14,7 +13,7 @@ require("lazy").setup({
         lazy = false,
         version = false, -- always use the latest git commit
     },
-    install = { colorscheme = { "gruvbox", "tokyonight", "habamax" } },
+    install = { colorscheme = { "gruvbox", "retrobox", "default" } },
     checker = { enabled = true, notify = false }, -- automatically check for plugin updates
     performance = {
         rtp = {

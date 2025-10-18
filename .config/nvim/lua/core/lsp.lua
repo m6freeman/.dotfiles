@@ -1,11 +1,8 @@
-local vim = vim
-vim.lsp.enable({
-    "lua_ls",
-})
+vim.lsp.enable({})
 
 vim.diagnostic.config({
     virtual_lines = true,
-    -- virtual_text = true,
+    virtual_text = true,
     underline = true,
     update_in_insert = false,
     severity_sort = true,
