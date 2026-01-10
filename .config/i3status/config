@@ -14,7 +14,7 @@ general {
         color_bad = "#d3869b"
 }
 
-order += "cmus"
+order += "rmpc"
 order += "volume master"
 order += "i3block xmr_feed"
 order += "cpu_usage"
@@ -31,7 +31,7 @@ lm_sensors {
         sensors = ['tccd1']
 }
 
-cmus {
+rmpc {
         format = "[\?if=is_started [\?if=is_playing  ][\?if=is_paused  ][\?if=is_stopped  ][[{artist}][\?soft  - ][{title}]]]"
         button_previous = 4
         button_next = 5
@@ -70,10 +70,6 @@ i3block xmr_feed {
         command = "~/dev/apps/rust/xmr_feed/target/debug/xmr_feed"
         interval = 60
 }
-
-
-
-
 
 
 cpu_temperature 0 {
