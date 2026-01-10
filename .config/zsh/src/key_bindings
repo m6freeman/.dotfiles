@@ -1,6 +1,8 @@
 #!/bin/sh
 
-bindkey -e
+bindkey -v
+export KEYTIMEOUT=1
+
 bindkey '^[[7~' beginning-of-line                               # Home key
 bindkey '^[[H' beginning-of-line                                # Home key
 if [[ "${terminfo[khome]}" != "" ]]; then

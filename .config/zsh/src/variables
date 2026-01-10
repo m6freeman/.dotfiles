@@ -8,6 +8,7 @@ export PATH="$PATH:$HOME/.dotnet/tools"
 #export PATH=/home/$USER/.local/share/gem/ruby/$(gem -v)/bin:$PATH
 HISTFILE=$HOME/.zhistory
 HISTSIZE=1000
+HISTDUP=erase
 SAVEHIST=500
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 
@@ -20,5 +21,4 @@ export LESS_TERMCAP_so=$'\E[01;47;34m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;36m'
 export LESS=-r
-
 

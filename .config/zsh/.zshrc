@@ -7,6 +7,7 @@ source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zinit/zinit.zsh
 
 # bind UP and DOWN arrow keys to history substring search
 zmodload zsh/terminfo
@@ -19,6 +20,12 @@ source "$ZDOTDIR/src/prompt"
 
 ## Options section
 setopt appendhistory                                            # Immediately append history instead of overwriting
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
 setopt autocd                                                   # if only directory path is entered, cd there.
 #setopt correct                                                  # Auto correct mistakes
 setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
@@ -37,6 +44,12 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"         # Colored comple
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'       # Case insensitive tab completion
 zstyle ':completion:*' rehash true                              # automatically find new executables in path 
 zstyle ':completion:*' use-cache on
+zstyle ':completion:*' menu no
+
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+zinit light Aloxaf/fzf-tab
 
 
 # Print a greeting message when shell is started
