@@ -1,15 +1,10 @@
 #!/bin/bash
 
-if ! [ -n "$TMUX" ]; then
-    if ! tmux has-session -t home; then
-        tmux new -s home -d
-        tmux split-window -t home:0 -v
-        tmux split-window -t home:0.0 -h
-        tmux split-window -t home:0.2 -h
-        tmux send-keys -t home:0.0 'btm' Enter
-        tmux send-keys -t home:0.2 'cmus' Enter
-        tmux send-keys -t home:0.3 'vifm' Enter
-        tmux resize-pane -t home:0.1 -x 8 -y 16
+if [ -z "$TMUX" ]; then
+    if ! tmux has-session -t home 2>/dev/null; then
+        tmux new-session -s home -d
+        tmux split-window -t home:0 -h -p 12
+        tmux send-keys -t home:0.0 'btm' C-m
     fi
     tmux attach -t home:0.1
 fi

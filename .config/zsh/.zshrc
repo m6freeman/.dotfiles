@@ -2,6 +2,7 @@
 
 export DOCKER_BUILDKIT=1
 export PATH=$PATH:$(ruby -e 'print Gem.user_dir')/bin
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 export PATH=/home/matt/.nimble/bin:$PATH
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
