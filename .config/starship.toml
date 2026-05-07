@@ -3,6 +3,7 @@ format = """$sudo\
             $username\
             $hostname\
             $directory\
+            $custom\
             $git_branch\
             \n\
             $character\
@@ -162,3 +163,10 @@ symbol = "ﯣ "
 [dotnet]
 disabled = false
 symbol = " "
+
+[custom.symlink]
+command = 'p=$(pwd); r=$(pwd -P); [ "$p" != "$r" ] && echo "󱅶 (${r/#$HOME/~})" || true'
+when = "true"
+format = "[$output]($style) "
+style = "dimmed"
+shell = ["zsh", "-d", "-f"]
